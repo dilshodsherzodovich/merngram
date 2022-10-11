@@ -1,0 +1,49 @@
+.create-post {
+  h3 {
+    text-align: center;
+  }
+  .newPost {
+    background-color: #181a1b;
+    padding: 2rem;
+    margin: auto;
+    width: 70%;
+    // max-width: 900px;
+    input {
+      color: #fff;
+    }
+    ::placeholder {
+      color: gray;
+      font-size: 12px;
+    }
+    .btn-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+    .submit-btn,
+    .cancel-btn {
+      padding: 1rem 3rem;
+      background: #022a26;
+      border: none;
+      outline: none;
+      color: #fff;
+      display: block;
+      cursor: pointer;
+      box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.73);
+    }
+    .cancel-btn {
+      background-color: rgb(78, 3, 3);
+    }
+  }
+}
+
+.errNotification {
+  background-color: red;
+  color: #fff;
+}
+
+.okNotifiaction {
+  background-color: green;
+  color: #fff;
+}

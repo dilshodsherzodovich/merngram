@@ -1,0 +1,140 @@
+.container {
+  .posts-row {
+    display: flex;
+    justify-content: center;
+    .allposts {
+      margin-top: 1.5rem;
+      width: 65%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      p,
+      h1,
+      span {
+        font-size: 14px;
+      }
+      .postcard {
+        width: 30rem !important;
+        border-radius: 10px;
+        border: 0.1rem #dbdbdb solid;
+        background: #181a1b;
+        margin-bottom: 1.5rem;
+        .userinfo {
+          border-radius: 10px;
+          border-bottom: 0.1rem #dbdbdb solid;
+          background-color: #181a1b;
+          .user {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            .username {
+              font-size: 12px;
+              display: inline-block;
+              cursor: pointer;
+            }
+            img {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 100%;
+              margin: 0 0.5rem;
+              cursor: pointer;
+            }
+          }
+        }
+        .post {
+          .postimg {
+            width: 100%;
+            img,
+            video {
+              width: 100%;
+              max-height: 500px;
+            }
+          }
+          .postreactions {
+            display: flex;
+            background-color: #181a1b;
+            padding: 0.5rem 0 1rem 1rem;
+            i {
+              font-size: 20px;
+              margin-right: 0.75rem;
+              cursor: pointer;
+            }
+          }
+          .postbio,
+          .postbio + p {
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+          }
+          .postbio + p,
+          .date {
+            font-size: 12px;
+            padding-left: 1rem;
+            color: gray;
+          }
+          .postTitle {
+            padding-left: 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: teal;
+          }
+        }
+        .comment {
+          display: flex;
+          align-items: center;
+          padding: 0 1rem;
+          i {
+            font-size: 20px;
+            margin-right: 0.5rem;
+            cursor: pointer;
+          }
+          input {
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+          }
+          ::placeholder {
+            color: gray;
+            font-size: 10px;
+          }
+          &-btn {
+            border: none;
+            background: none;
+            color: rgb(32, 167, 255);
+            font-size: 16px;
+            cursor: pointer;
+            &:focus {
+              box-shadow: none;
+              -webkit-box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+    .myPosts {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 492px) {
+  .container {
+    padding: 0 !important;
+    .posts-row {
+      flex-wrap: wrap;
+      align-items: center;
+      .allposts {
+        width: 100% !important;
+        .postcard {
+          width: 90% !important;
+          max-width: 25rem !important;
+        }
+      }
+      .myPosts {
+        display: none;
+      }
+    }
+  }
+}
